@@ -16,10 +16,16 @@
         </a>
         <table class="table table-sm">
             <tr>
-                <th></th>
+                
                 <th>Customer</th>
-                <th>Order</th>
+                <th>Phone</th>
             </tr>
+            {% for cust in cust_l %}
+                <tr>
+                <td>{{cust.name}}</td>
+                <td>{{cust.phone}}</tdz>
+                </tr>
+            {% endfor %}
         </table>
     </div>
 </div>
@@ -32,13 +38,22 @@
     </a>
     <table class="table table-sm">
         <tr>
-            <th></th>
+           
             <th>Customer</th>
             <th>Date Ordered</th>
             <th>Status</th>
             <th>Update</th>
             <th>Remove</th>
         </tr>
+        {% for ord in ord_l %}
+                <tr>
+                <td>{{ord.customer}}</td>
+                <td>{{ord.date_created}}</td>
+                <td>{{ord.status}}</td>
+                <td><a href="">Update</a></td>
+                <td><a href="">Delete</a></td>
+                </tr>
+            {% endfor %}
     </table>
 </div>
 </div>
